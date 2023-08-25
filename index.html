@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/main.css" />
+    <title>Music player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-orange-200">
+    
+    <section class="flex flex-wrap h-screen">
+      <div class="w-full md:w-1/3 rounded order-last md:order-first">
+        <!-- Music list -->
+        <div>
+          <div class="bg-orange-400 border-e-2 border-dotted">
+            <h1
+              class="text-[20px] md:text-[26px] py-4 px-3 text-black text-center"
+            >
+              Anime Songs
+            </h1>
+          </div>
+          <ul
+            id="music-list"
+            class="h-[300px] md:h-[600px] leading-7 overflow-y-scroll text-black text-[13px] md:text-[16px] border-r-2 border-dotted bg-orange-300 text-center cursor-pointer"
+          >
+            <li class="border-b-2 border-dotted py-4 px-3">
+              Haikyuu - Opening Full "FLY HIGH" by BURNOUT SYNDROMES
+            </li>
+            <li class="border-b-2 border-dotted py-4 px-3">
+              Attack on Titan Season 4 - Ending 『Shock』by Yuko Ando
+            </li>
+            <li class="border-b-2 border-dotted py-4 px-3">
+              Demon Slayer -Opening Full Gurenge" by LiSA
+            </li>
+            <li class="border-b-2 border-dotted py-4 px-3">
+              Jujutsu Kaisen - Opening Full『Kaikai Kitan』by Eve
+            </li>
+            <li class="border-b-2 border-dotted py-4 px-3">
+              Naruto - Opening Full『KANA-BOON』 by Silhouette
+            </li>
+            <li class="border-b-2 border-dotted py-4 px-3">
+              My Hero Academia Season 5 - Opening Full『No.1』by DISH
+            </li>
+            <li class="border-b-2 border-dotted py-4 px-3">
+              Hiroshi Kitadani - We Are (One Piece)
+            </li>
+            <li class="border-b-2 border-dotted py-4 px-3">
+              Attack on Titan S4 - OP Full『My War』by Shinsei Kamattechan
+            </li>
+            <li class="border-b-2 border-dotted py-4 px-3">
+              Attack on Titan S2 - OP "Shinzou wo Sasageyo" by Linked Horizon
+            </li>
+            <li class="border-b-2 border-dotted py-4 px-3">
+              TK from Ling toshite Sigure - "Unravel" (Tokyo Ghoul Opening)
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="w-full md:w-2/3 flex flex-col justify-center items-center order-first md:order-last my-4"
+      >
+        <div
+          id="music-bg"
+          class="flex flex-col justify-center items-center px-4 py-3 rounded"
+        >
+          <div class="w-72 rounded h-[250px] md:h-[300px] overflow-hidden my-3">
+            <img src="" class="w-full h-full object-cover" id="cover" />
+          </div>
+          <p
+            class="text-[25px] md:text-[30px] my-4 font-semibold text-center"
+            id="title"
+          >
+            W
+          </p>
+
+          <div class="slider_container w-full gap-3 flex justify-between">
+            <div class="current-time">00:00</div>
+            <input type="range" min="1" max="100" value="0" id="song-range" />
+            <div class="total-duration">00:00</div>
+          </div>
+          <div class="flex items-center my-4">
+            <div id="prev">
+              <i class="fa-solid fa-backward-step text-[35px] me-7"></i>
+            </div>
+            <div id="playpause">
+              <i class="fa fa-play-circle text-[40px]"></i>
+            </div>
+            <div id="next">
+              <i class="fa-solid fa-forward-step text-[35px] ms-7"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="/src/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/258c0c66d8.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
